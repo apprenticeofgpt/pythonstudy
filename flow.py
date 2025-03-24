@@ -46,8 +46,31 @@ for i in range(2, 10):
     for j in range(1, 10):
         print(f"{i} x {j} = {i*j}", end="|")
     print()
-print("----------")
-res = []
-for num in marks:
-    res = marks.append(num * 2)
-print(res)
+print("------------")
+
+
+def addMany(*args):
+    sum = 0
+    for i in args:
+        sum += i
+    return sum
+
+
+print(addMany(1, 2, 3, 4, 5, 6))
+
+
+def AddMultiply(choice, *args):
+    result = 0
+    if choice == "add":
+        for i in args:
+            result += i
+    elif choice == "multiply":
+        for i in args:
+            result *= i
+    return result
+
+
+a = [1, 2, 3, 4]
+result = [num * 3 for num in a if num % 2 == 0]
+print(result)
+[6, 12]
