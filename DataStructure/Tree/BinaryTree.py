@@ -1,11 +1,9 @@
-class Tree:
+class node:
     def __init__(self, data):
         self.data = data
         self.left = None
         self.right = None
-
-
-# 전위 순회: Root → Left → Right
+        
 def preorder(node):
     if node:
         print(node.data, end=" ")
@@ -13,7 +11,6 @@ def preorder(node):
         preorder(node.right)
 
 
-# 중위 순회: Left → Root → Right
 def inorder(node):
     if node:
         inorder(node.left)
@@ -21,9 +18,25 @@ def inorder(node):
         inorder(node.right)
 
 
-# 후위 순회: Left → Right → Root
 def postorder(node):
     if node:
         postorder(node.left)
         postorder(node.right)
         print(node.data, end=" ")
+first_node=node(0)
+second_node=node(1)
+third_node=node(2)
+fourth_node=node(3)
+
+first_node.left=second_node
+first_node.right=third_node
+second_node.left=fourth_node
+
+print("pre:")
+preorder(first_node)
+
+print("\nin:")
+inorder(first_node)
+
+print("\npost:")
+postorder(first_node)
