@@ -10,7 +10,7 @@ class bowling_game:
         self.pitch_count = 0
         self.max_pitch_count = 30
 
-    def init(self):
+    def init(self): # 볼링 기록 초기화
         self.pitch_record = [[0, 0, 0] for _ in range(self.max_frames)]
         self.pitch_loc_index = {"frame": 0, "pitch_order": 0}
 

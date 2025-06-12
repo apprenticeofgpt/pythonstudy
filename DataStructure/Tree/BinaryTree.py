@@ -23,6 +23,7 @@ def postorder(node):
         postorder(node.left)
         postorder(node.right)
         print(node.data, end=" ")
+        
 first_node=node(0)
 second_node=node(1)
 third_node=node(2)
